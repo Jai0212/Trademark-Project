@@ -1,0 +1,120 @@
+.App {
+  text-align: center;
+  background-color: #20232a;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: white;
+}
+
+.App-header {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #282c34;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dropzone {
+  border: 2px dashed #61dafb;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  max-width: 500px;
+  background-color: #f8f9fa;
+  color: #495057;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+  margin: 0 auto;
+  margin-top: 10px;
+  display: flex;
+  align-items: center; /* Vertically centers the content */
+  justify-content: center; /* Horizontally centers the content (optional) */
+}
+
+.dropzone:hover {
+  background-color: #e6f0ff;
+  border-color: #21a1f1;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.generate-logo-container {
+  margin-top: 50px;
+}
+
+.generate-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.text-input {
+  padding: 12px;
+  width: 100%;
+  max-width: 600px;
+  height: 50px;
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+  margin: 10px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+h1 {
+  font-size: 2.1rem;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.75rem;
+  margin: 30px 0;
+}
+
+p {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  margin-top: 20px;
+}
+
+.dropzone p {
+  margin: 12px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+}
+
+.generated-image {
+  width: 500px;
+}
