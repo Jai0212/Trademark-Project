@@ -8,6 +8,7 @@ function App() {
 
   const [uploadedFile, setUploadedFile] = useState(null);
   const [similarityScore, setSimilarityScore] = useState(null);
+  const [similarImage, setSimilarImage] = useState(null); // State to hold the similar image
   const [generatedLogo, setGeneratedLogo] = useState(null);
   const [textInput, setTextInput] = useState("");
 
@@ -25,6 +26,7 @@ function App() {
     await axios.post(`${BACKEND_URL}/compare-logo`, formData)
       .then(response => {
         setSimilarityScore(response.data.similarity_score);
+        setSimilarImage(`data:image/png;base64,${response.data.image_base64}`); // Set the similar image
       })
       .catch(error => {
         console.error('Error uploading file:', error);
@@ -65,6 +67,13 @@ function App() {
         {similarityScore && (
           <div>
             <h3>Similarity Score: {similarityScore}</h3>
+          </div>
+        )}
+
+        {similarImage && (
+          <div>
+            <img className="generated-image" src={similarImage} alt="Most Similar Logo" />
+            <h3 className='most-similar-image'>Most Similar Image</h3>
           </div>
         )}
 
